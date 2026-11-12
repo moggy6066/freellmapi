@@ -41,6 +41,6 @@ export default defineConfig({
     // jsdom 27 delegates Storage to Node's experimental webstorage, which is
     // undefined without --experimental-webstorage; the setup file installs a
     // memory Storage only where the native one is missing. See the file.
-    setupFiles: ['./vitest.setup-storage.ts'],
+    setupFiles: ['./vitest.setup-storage.ts', './vitest.setup-locale.ts'],
   },
 })

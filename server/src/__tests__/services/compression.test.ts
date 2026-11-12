@@ -386,7 +386,7 @@ describe('compression engines', () => {
   // The coverage leg is instrumented by v8, which inflates these timings by
   // roughly 2-3x, so it gets the same slack as a laptop. The uninstrumented
   // matrix leg still holds the exact caps.
-  const slack = process.env.CI && process.env.COVERAGE !== '1' ? 1 : 3;
+  const slack = process.env.CI && process.env.COVERAGE !== '1' ? 1 : 5;
 
   it('stays within the 100 KB synchronous performance budget', () => {
     const payload = `${'plain status line without protected tokens\n'.repeat(2_500)}tail`;
